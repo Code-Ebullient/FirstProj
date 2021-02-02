@@ -1,26 +1,44 @@
-h1 {
-    text-align: center;
-    padding-bottom: 40px;
+img {
+  max-width: 100%;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: center;
-  }
-
-#img-div {
-    width: 100%;
-    height: auto;
-    padding-bottom: 30px;
+.container {
+  padding: 3rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-column: 1fr;
+  grid-template-row: auto 1fr 1fr minmax(50px, 1fr);
+  grid-template-areas:
+    'main-title'
+    'img-img'
+    'tribute-detail'
+    'link';
 }
 
-#tribute-info {
-    padding-bottom: 10px;
+.main-title {
+  grid-area: main-title;
+  text-align: center;
 }
 
-p {
-    padding-bottom: 20px;
+.img-img {
+  grid-area: img-img;
+  margin: auto;
+  max-width: 100%;
 }
+
+.img-img p {
+  text-align: center;
+}
+
+.tribute-detail {
+  grid-area: tribute-detail;
+  text-align: center;
+}
+
+.link {
+  grid-area: link;
+  margin: auto;
+}
+
+
+
